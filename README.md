@@ -71,6 +71,11 @@ Overview:
 11. Add your PyPI credentials as secrets of the GitHub repository
     - `PYPI_USERNAME` (resp. `PYPI_PASSWORD`) for your username (resp. password)
     - this may require you to register on PyPi first
+    - Note: PyPI no longer allows authentication with a username and password. Please follow these steps instead:
+        1. Authenticate on PyPi
+        2. Go to your account settings and generate a new API token
+        3. Add the API Token to the `PYPI_PASSWORD` secret
+        4. Add the string `__token__` to the `PYPI_USERNAME` secret
 
 12. Generate a GitHub token and add it as a secret of the GitHub repository, named `RELEASE_TOKEN`
     - cf. <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic>
